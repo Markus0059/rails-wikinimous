@@ -1,0 +1,13 @@
+<nav class="nav justify-content-around">
+  <a>Wikinimous</a>
+  <a <%= link_to "new article", articles_path %> ></a>
+</nav>
+
+<div class="container">
+  <ul>
+   <% @articles.each do|article| %>
+    <li><%= article.title %></li>
+    <li><%= article.content %></li>
+   <%end  %>
+  </ul>
+</div>
